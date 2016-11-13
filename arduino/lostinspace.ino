@@ -1,11 +1,17 @@
-/* Sweep
-  by BARRAGAN <http://barraganstudio.com>
-  This example code is in the public domain.
+/***********************************
+ * 
+ *    Creation and Computation Experiment 3 
+ * 
+ *    Ania Medrek & Orlando Bascunan
+ * 
+ *    Arduino Code 
+ *     
+ * 
+ *    November 2016
+ * 
+ */ //////////////////////////////////
 
-  modified 8 Nov 2013
-  by Scott Fitzgerald
-  http://www.arduino.cc/en/Tutorial/Sweep
-*/
+
 
 #include <Servo.h>
 
@@ -16,12 +22,11 @@ Servo servo4;
 Servo servo5;
 
 
-// create servo object to control a servo
 
-// twelve servo objects can be created on most boards
-
-int pos = 0;    // variable to store the servo position
+int pos = 0;   
+// Showing Angle for servos
 int posShowing = 100;
+// Hidden Angle for servos
 int posResting = 10;
 
 void setup() {
@@ -31,7 +36,6 @@ void setup() {
   servo4.attach(9);
   servo5.attach(8);
 
-  // attaches the servo on pin 9 to the servo object
 //restAll();
 }
 
@@ -55,6 +59,9 @@ void restAll() {
   servo4.write(posResting);
   servo5.write(posResting);
 }
+
+// Receiving a number show a flag or hide them all.
+
 void showFlag(int show) {
   switch (show) {
     case 0:
